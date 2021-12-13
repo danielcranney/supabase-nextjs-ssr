@@ -1,0 +1,153 @@
+@import url("https://use.typekit.net/gsm2ykj.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*-----------------------
+BASE STYLES             
+-----------------------*/
+
+@layer base {
+  body {
+    @apply min-h-screen dark:bg-gray-800 bg-white;
+  }
+}
+/* Reset */
+@layer base {
+  * {
+    @apply antialiased font-body box-border;
+  }
+}
+
+/* Typography Styles */
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-tight mb-2
+    text-gray-600 dark:text-white
+    transition-all duration-150 ease-in-out;
+  }
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+  h5 {
+    @apply text-lg md:text-xl;
+  }
+  h6 {
+    @apply text-sm md:text-base;
+  }
+  p {
+    @apply text-base mb-4 leading-relaxed
+    text-gray-550 dark:text-gray-300;
+  }
+  a {
+    @apply text-primary-main font-semibold;
+  }
+}
+
+@layer base {
+  .emphasis {
+    @apply text-transparent bg-clip-text bg-gradient-to-br from-primary-alt to-primary-main;
+  }
+}
+
+/* Page Wrapper */
+@layer base {
+  .wrapper {
+    @apply min-h-screen flex flex-col bg-primary-100 dark:bg-gray-800
+    transition-all duration-150 ease-in-out;
+  }
+}
+
+/* Content Box */
+@layer components {
+  .content-box {
+    @apply bg-white border border-primary-100
+    dark:bg-gray-700 dark:border-gray-600 rounded-xl
+    transition-all duration-150 ease-in-out;
+  }
+}
+
+/* Page Title */
+@layer base {
+  .page-title {
+    @apply mb-8;
+  }
+}
+
+/*-----------------------
+NAVIGATION         
+-----------------------*/
+
+/* Horizontal Navigation */
+@layer components {
+  .h-nav {
+    @apply inline-flex items-center
+    text-gray-500 hover:text-gray-800
+    dark:hover:text-white
+    transition-all duration-150 ease-in-out;
+  }
+}
+
+/*-----------------------
+BUTTON SIZING     
+-----------------------*/
+/* Large Button */
+@layer components {
+  .btn-lg {
+    @apply inline-flex h-14 items-center px-8 justify-center
+    text-center
+    font-semibold rounded-full
+    shadow-none;
+  }
+}
+
+/* Medium Button */
+@layer components {
+  .btn-md {
+    @apply inline-flex h-12 py-1 items-center justify-center px-6 flex-grow-0
+    text-center
+    font-semibold rounded-full
+    shadow-none
+    text-base;
+  }
+}
+
+/* Small Button */
+@layer components {
+  .btn-sm {
+    @apply inline-flex h-12 items-center justify-center
+    px-5 flex-grow-0
+    text-center
+    font-semibold rounded-full
+    shadow-none
+    text-sm;
+  }
+}
+
+/*-----------------------
+BUTTON COLOR STYLINGS     
+-----------------------*/
+
+/* Standard Buttons */
+@layer components {
+  .btn-gray-outline {
+    @apply border-2 border-gray-600 text-gray-600 dark:border-gray-500 dark:text-gray-400
+    opacity-100 hover:bg-gray-600 dark:hover:bg-gray-500 hover:text-white dark:hover:text-white
+        transition-all duration-150 ease-in-out focus:outline-none;
+  }
+}
