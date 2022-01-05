@@ -36,16 +36,14 @@ export default function ReportsPage({ user }) {
       <main className="flex flex-col items-start flex-grow px-12 mx-auto my-12">
         <h1 className="mb-6 text-center">Protected Page</h1>
 
-        <div className="flex flex-col justify-start w-full mb-6 bg-white border rounded-md md:items-center border-primary-200 p-7 dark:bg-gray-700 dark:border-gray-600">
+        <div className="flex flex-col justify-start w-full mb-6 bg-white border rounded-md md:items-center border-primary-200 p-7">
           <p className="mb-2">
-            <span className="font-semibold text-gray-600 dark:text-white">
-              Email:{" "}
-            </span>
+            <span className="font-semibold text-gray-600">Email: </span>
             {user.email}
           </p>
 
           <p className="mb-2">
-            <span className="font-semibold text-gray-600 dark:text-white">
+            <span className="font-semibold text-gray-600">
               Last Signed In:{" "}
             </span>
             {new Date(user.last_sign_in_at).toLocaleString()}

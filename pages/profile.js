@@ -25,21 +25,6 @@ const Profile = ({ router }) => {
     router.query.selectedView || "sign_in"
   );
 
-  // useEffect(() => {
-  //   const { data: authListener } = supabase.auth.onAuthStateChange(
-  //     (event, session) => {
-  //       if (event === "PASSWORD_RECOVERY") setAuthView("update_password");
-  //       if (event === "USER_UPDATED")
-  //         setTimeout(() => setAuthView("sign_in"), 1000);
-  //       // Send session to /api/auth route to set the auth cookie.
-  //     }
-  //   );
-
-  //   return () => {
-  //     authListener.unsubscribe();
-  //   };
-  // }, []);
-
   const View = () => {
     if (!user)
       return (
@@ -93,7 +78,7 @@ const Profile = ({ router }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <main className="border-b min-h-96 border-primary-200 dark:border-gray-600 bg-primary-100 dark:bg-gray-800">
+      <main className="border-b min-h-96 border-primary-200 bg-primary-100">
         {/* // Outer Wrapper with min height full screen */}
         <div className="container flex items-center flex-grow mx-auto my-12">
           {/* Form Container - Full */}
